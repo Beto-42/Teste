@@ -147,6 +147,38 @@ Cypress.Commands.add("cadastrar_usuario" , () => {
               cy.get(':nth-child(2) > td > a > img').click();
             
             });
+
+            Cypress.Commands.add('selecionar_passagem04', () => {
+
+                cy.get(':nth-child(2) > [width="80"] > a').click();
+
+                cy.get('[value="oneway"]').click(); 
+    
+                cy.get('b > select').select('2');
+                              
+                  cy.get(':nth-child(4) > [style="font-family:Arial, Helvetica;font-size:13px;color:#000;padding:5px;"] > select')
+                  .select('London').should('have.value', 'London');
+            
+                  cy.get('[name="fromMonth"]').select('September');
+            
+                  cy.get('[name="fromDay"]').select('4');
+            
+                  cy.get(':nth-child(6) > [style="font-family:Arial, Helvetica;font-size:13px;color:#000;padding:5px;"] > select')
+                  .select('Portland').should('have.value', 'Portland');
+            
+                  cy.get('[name="toMonth"]').select('September');
+                  cy.get('[name="toDay"]').select('23');
+            
+                  cy.get(':nth-child(2) > [size="2"] > [checked=""]').click();
+            
+                  cy.get(':nth-child(10) > [style="font-family:Arial, Helvetica;font-size:13px;color:#000;padding:5px;"] > select')
+                    .select('Unified Airlines').should('have.value', 'Unified Airlines');
+            
+                  cy.get('td > input').click();
+            
+                  cy.get(':nth-child(2) > td > a > img').click();
+                
+                });
 //
 //
 // -- This is a dual command --
