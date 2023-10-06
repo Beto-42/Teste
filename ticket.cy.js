@@ -35,12 +35,18 @@ describe('Acessar site de passagem', () => {
     //  cy.acessar_site();
 
     cy.acessar_site();
-      
+
     cy.selecionar_passagem02();
 
       cy.acessar_site();
 
       cy.selecionar_passagem03();
+
+      cy.acessar_site();
+
+      cy.selecionar_passagem04();
+
+
       
       })
 
