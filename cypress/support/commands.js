@@ -44,8 +44,6 @@ Cypress.Commands.add("cadastrar_usuario" , () => {
 });
 
 
-
-
 // Login no site de passagens áreas
  Cypress.Commands.add("acessar_site", () => {
     cy.get(':nth-child(2) > [width="112"] > input').type("beto")
@@ -119,6 +117,7 @@ Cypress.Commands.add("cadastrar_usuario" , () => {
         
         });
 
+        //Mais uma tentativa de encontar passagens
         Cypress.Commands.add('selecionar_passagem03', () => {
             cy.get(':nth-child(2) > [width="80"] > a').click();
 
@@ -148,6 +147,7 @@ Cypress.Commands.add("cadastrar_usuario" , () => {
             
             });
 
+            //Aqui altero o tipo para 'One Way'
             Cypress.Commands.add('selecionar_passagem04', () => {
 
                 cy.get(':nth-child(2) > [width="80"] > a').click();
@@ -179,11 +179,3 @@ Cypress.Commands.add("cadastrar_usuario" , () => {
                   cy.get(':nth-child(2) > td > a > img').click();
                 
                 });
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
